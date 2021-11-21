@@ -8,13 +8,13 @@ public class Direccion {
 
     public static char letra(int direccion) {
         switch (direccion) {
-            case NORTE:
+            case Direccion.NORTE:
                 return 'N';
-            case ESTE:
+            case Direccion.ESTE:
                 return 'E';
-            case SUR:
+            case Direccion.SUR:
                 return 'S';
-            case OESTE:
+            case Direccion.OESTE:
                 return 'O';
             default:
                 return 'X';

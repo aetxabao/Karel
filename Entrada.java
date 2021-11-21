@@ -9,17 +9,13 @@ public class Entrada {
     }
 
     public int leerEntero(String txt, int min, int max) {
-        //
-        // TODO: leerEntero
-        //
-        // imprime el mensaje pasado como parametro y solicita un valor 
-        // entre min y max tambien pasados como parametros, incluyendo 
-        // ambos. El metodo debe devolver un valor valido introducido 
-        // por el usuario, mientras el usuario no teclee un numero en el 
-        // rango comprendido el metodo no debe finalizar. Supondremos que
-        // el usuario solo escribe numeros enteros.
-        // 
-        return 0;
+        int v = -1;
+        while (v < min || v > max) {
+            System.out.printf("%s [%d-%d]: ", txt, min, max);
+            v = teclado.nextInt();
+        }
+        teclado.nextLine();
+        return v;
     }
 
 }

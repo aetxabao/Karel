@@ -38,7 +38,7 @@ public class Posicion {
     }
 
     public String toString() {
-        return "(" + x + "," + y + ")";
+        return String.format("(%d,%d)", x, y);
     }
 
 }

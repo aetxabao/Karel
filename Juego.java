@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Juego {
 
     private final int ANCHO = 6;
@@ -25,31 +27,21 @@ public class Juego {
     }
 
     private void gameLoop() {
-        //
-        // TODO:
-        //
-        // escribe un bucle para que mientras el numero de rocas del
-        // tablero sea mayor que cero y karel no haya llegado al limite
-        // de pasos (definido como constante de la clase) se ejecuten
-        // las siguientes acciones:
-        //
-        // si la posicion a la que avanzaria karel esta fuera de los
-        // limites del tablero, se imprime el estado de karel despues
-        // del mensaje "Limite", karel gira y se vuelve a imprimir el
-        // nuevo estado con la direccion cambiada junto al mensaje
-        // "Gira".
-        //
-        // si la posicion a la que avanzaria karel coincide con alguna
-        // roca, la roca se debe destruir como se ha indicado en el
-        // metodo chocaRoca de la clase Tablero. En esta circunstancia
-        // imprime el estado de karel despues del mensaje "* Roca",
-        // gira a karel y vuelve a imprimir el nuevo estado con la
-        // direccion cambiada junto al mensaje "Gira".
-        //
-        // si karel no se encuentra en ninguna de las dos circunstancias
-        // anteriores karel debe avanzar una posicion en la direccion
-        // que tenga, nada se lo impide.
-        //
+        while (tablero.getNumeroRocas() > 0 && karel.getPasos() < LIMITE) {
+
+            if (tablero.fueraLimite(karel.posicionAvanzada())) {
+                karel.print("Limite");
+                karel.gira();
+                karel.print("Gira");
+            } else if (tablero.chocaRoca(karel.posicionAvanzada())) {
+                karel.print("* Roca");
+                karel.gira();
+                karel.print("Gira");
+            } else {
+                karel.avanza();
+            }
+
+        }
     }
 
     private void fin() {
