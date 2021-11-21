@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Tablero
+comment1.params=ancho\ alto
+comment1.target=Tablero(int,\ int)
+comment2.params=
+comment2.target=int\ getNumeroRocas()
+comment3.params=pos
+comment3.target=boolean\ fueraLimite(Posicion)
+comment4.params=pos
+comment4.target=boolean\ chocaRoca(Posicion)
+comment5.params=
+comment5.target=void\ crearRocas()
+comment6.params=
+comment6.target=void\ print()
+numComments=7

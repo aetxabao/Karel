@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Juego
+comment1.params=
+comment1.target=void\ run()
+comment2.params=
+comment2.target=void\ inicio()
+comment3.params=
+comment3.target=void\ gameLoop()
+comment4.params=
+comment4.target=void\ fin()
+numComments=5

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Karel
+comment1.params=posicion\ direccion
+comment1.target=Karel(Posicion,\ int)
+comment2.params=x
+comment2.target=Karel(int)
+comment3.params=
+comment3.target=int\ getPasos()
+comment4.params=
+comment4.target=void\ gira()
+comment5.params=
+comment5.target=Posicion\ posicionAvanzada()
+comment6.params=
+comment6.target=void\ avanza()
+comment7.params=
+comment7.target=java.lang.String\ toString()
+comment8.params=txt
+comment8.target=void\ print(java.lang.String)
+numComments=9
