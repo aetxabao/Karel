@@ -18,4 +18,10 @@ public class Entrada {
         return v;
     }
 
+    public void leerEnter() {
+        System.out.print("Pulsa ENTER para continuar ");
+        String txt = teclado.nextLine();
+        System.out.println(txt);
+    }
+
 }

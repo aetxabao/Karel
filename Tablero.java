@@ -1,5 +1,5 @@
 public class Tablero {
-
+    
     private int ancho;
     private int alto;
     private Posicion roca1;
@@ -27,17 +27,17 @@ public class Tablero {
     }
 
     public boolean chocaRoca(Posicion pos) {
-        if (roca1 != null && roca1.equals(pos)) {
+        if (roca1!=null && roca1.equals(pos)) {
             roca1 = null;
             numeroRocas--;
             return true;
         }
-        if (roca2 != null && roca2.equals(pos)) {
+        if (roca2!=null && roca2.equals(pos)) {
             roca2 = null;
             numeroRocas--;
             return true;
         }
-        if (roca3 != null && roca3.equals(pos)) {
+        if (roca3!=null && roca3.equals(pos)) {
             roca3 = null;
             numeroRocas--;
             return true;
@@ -46,14 +46,14 @@ public class Tablero {
     }
 
     public void crearRocas() {
-        roca1 = new Posicion(1, 5);
-        roca2 = new Posicion(0, 4);
-        roca3 = new Posicion(5, 1);
+        roca1 = new Posicion(1,5);
+        roca2 = new Posicion(0,4);
+        roca3 = new Posicion(5,1);
         numeroRocas = 3;
     }
 
     public void print() {
-        String s = String.format("Tablero de tamano %dx%d\nRocas: ", ancho, alto);
+        String s = String.format("Tablero de tamano %dx%d\nRocas: ",ancho,alto);
         if (roca1 != null)
             s += roca1.toString() + " ";
         if (roca2 != null)
@@ -61,6 +61,18 @@ public class Tablero {
         if (roca3 != null)
             s += roca3.toString() + " ";
         System.out.println(s);
+    }
+
+    public void situacion(String[][] panel) {
+        if (roca1 != null) {
+            panel[alto-roca1.getY()][roca1.getX()+1] = "A";
+        }
+        if (roca2 != null) {
+            panel[alto-roca2.getY()][roca2.getX()+1] = "B";
+        }
+        if (roca3 != null) {
+            panel[alto-roca3.getY()][roca3.getX()+1] = "C";
+        }
     }
 
 }
